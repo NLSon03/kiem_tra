@@ -5,7 +5,7 @@ require_once 'includes/functions.php';
 
 // Kiểm tra đăng nhập
 if (!isset($_SESSION['user_id'])) {
-    header('Location: ../login.php');
+    header('Location: login.php');
     exit;
 }
 
@@ -22,7 +22,7 @@ if (!$isAdmin) {
         'type' => 'danger',
         'message' => 'Bạn không có quyền thực hiện thao tác này!'
     ];
-    header('Location: ../pages/employee_list.php');
+    header('Location: pages/employee_list.php');
     exit;
 }
 
